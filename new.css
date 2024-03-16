@@ -1,0 +1,35 @@
+h1 
+/*选择器
+h1就是选择h1这个是标签选择器，找到所有h1；
+*就是全局选择器；
+.thered 类别选择器；比如说让h1变成类别选择器，就吧<h1 class = "thered">就好了
+#blue id选择器；同上<h1 id = "blue">,对于以上区别就是id只能有一个但是如今选择器无大碍但是最好就一个id
+*/
+{
+    color:rgb(32, 106, 170);font-size: small;
+}
+/*
+E,F 表示都；
+E F 表示E元素里面的所有F子孙；
+E>F 表示E元素里的所有F儿子；
+E+F 表示比邻E元素的所有同级F兄弟；
+*/
+h1,h2 
+{
+
+}
+/*
+属性选择器
+p[title]就是p中有title属性的所有
+*/
+p[title]
+{
+
+}
+/*
+伪类E：hover 被鼠标悬挂的东西
+*/
+h1:hover
+{
+width: 300px;transform: scale(1.2);transition:1s;
+}

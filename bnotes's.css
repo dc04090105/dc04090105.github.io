@@ -1,0 +1,51 @@
+.container{
+    width: 800px;
+    margin:0 auto;
+    padding: 10px 20px;
+    margin-top: 0;
+    background-image: url("bg.jpg");
+    box-shadow:10px 10px 5px#88888888;
+}
+.dt
+{
+    text-align:center;
+}
+h1{
+    text-align: center;
+}
+.class{
+    align:center;
+}
+p{
+    text-indent:20px;
+}
+h3
+{
+    background-color: #05b0ff;
+    color: white;
+    line-height: 30px;
+    padding-left:10px;
+    border-radius:3px;
+    box-shadow:10px 10px 5px #88888888;
+}
+.table1{
+    text-align:"center";
+    border: 1px;
+    padding: 2px;
+    width:500;
+}
+.honour{
+    padding-left: 10px;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+table,th,td{
+    border:1px solid black;
+}
+th,td{
+    text-align: enter;
+    vertical-align: middle;
+    padding: 0px;
+}
