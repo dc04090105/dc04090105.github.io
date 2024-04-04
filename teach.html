@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            height: 80px;
+            background-color: #81aefc;
+            margin-bottom: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 999;
+        }
+        .main{
+            margin-top:90px;
+        }
+        .center{
+            margin: 0 auto;
+            width: 960px;
+        }
+        .head .center{
+            background-color: #003bfc;
+            height: 80px;
+        }
+        .main{
+            background-color: white;
+        }
+        .left{
+            height: 800px;
+            float: left;
+            width: 700px;
+            background-color: red;
+            margin-bottom: 10px;
+        }
+        .right{
+            float: right;
+            height: 300px;
+            width: 250px;
+            background-color: green;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .foot{
+            background-color: #505050;
+            clear:both;
+            height: 50px;
+        }
+        .foot .center{
+            background-color: #0d0d0d;
+            height: 50px;
+        }
+        .box1{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            margin: 10px 0;
+            
+        }
+        .box2{
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            margin-bottom: 10px;
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+        .box3{
+            background-color: yellow;
+            height: 50px;
+            width: 50px;
+            margin: bottom 10px;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+     .circle{
+        position: absolute;
+        top: -50px; /* 根据需要调整，使圆形在div上方 */  
+        left: 50%; /* 水平居中 */  
+        transform: translateX(-50%); /* 水平偏移量，使得圆形水平居中 */  
+        width: 100px; /* 设置圆形的宽度 */  
+        height: 100px; /* 设置圆形的高度 */  
+        border-radius: 50%; /* 设置为50%以创建圆形 */  
+        background-color: #3498db;
+     }
+     .rto{
+        bottom: 0px;
+        right: 0px;
+        position: fixed;
+        background-color: red;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+     }
+     .menu{
+        float: right;
+        top: 30px;
+        right: 20px;
+     }
+     @media(max-width:960px){
+        .container{
+            width:100%;
+        }
+        .left{
+            width:100%;
+        }
+        .right{
+            width:100%;
+        }
+        #second{
+            display:none;
+        }
+     }
+    </style>
+</head>
+<body class="main">
+    <div class="head">
+        <div class="center">
+            <img src="school.jpg" alt="这是一个图片" width="80px" height="80px">
+            <div class="menu">
+                <a href="#">aaa</a>
+                <a href="#">bbb</a>
+                <a href="#">bbb</a>
+            </div>
+        </div>
+    </div>
+    <div class="mind" id="go1">
+        <div class="center">
+            <div class="left">asdfasdf</div>
+            <div class="right"></div>
+            <div class="right" id = "second">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="center"></div>
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="rto"><a href="#go1">1</a></div>
+    
+</body>
+</html>

@@ -33,3 +33,36 @@ h1:hover
 {
 width: 300px;transform: scale(1.2);transition:1s;
 }
+/*盒子：
+border：边框
+margin：外边距
+padding：内边距
+height：高度
+width：宽度
+element：元素 
+上右下左的顺序；只写一个的话是全部都一样，写两个是上下一个，左右一个，三个就是上第一个左右第二个下第三个
+如果选定设置：apdding-left：10px 左边内边距是10
+*/
+
+/*布局：定位、浮动、FLEX（大部分都用）、GRID*/
+/*盒子块级元素：div、h1、p；行内元素：pan、strong，但是可以通过display：block（变为盒子）、inline（变为行）、none（鼠标放上去就有东西）*/
+/*定位：
+position属性:
+static：静态属性
+fixed：固定元素（相对于浏览器固定，一直会出现在屏幕上）
+relative:相对于原来位置进行偏移
+absolute：绝对定位，会找到最近的relative作为父亲去一定
+*/
+/*浮动：可以理解为文本环绕
+float:reght
+footer{
+    clear:both;清除浮动}
+*/
+/*响应式设计
+@media(max-width:960px){
+    当最小宽度小于960时其中的css会生效
+}
+*/
+div{
+    transition: 2s;
+}

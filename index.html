@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><!--link css回车:外部样式表-->
     <title>我的简历</title>
+    <style>
+        h1{
+            color:blueviolet;
+        }
+    </style><!--内部样式表-->
 </head>
 <body>
-    <h1>段延</h1>
-    <img src="7b7963abcbab191c5866d89f3a431f0.jpg" alt="这是我的证件照" width = "200"><!--width中是像素-->
+    <h1 style = "color: aqua;">段延</h1><!-- style 内联样式-->
+    <img src="1.webp" alt="这是我的证件照" width = "200" height="200" border="2" title="这个是我的证件照">
+    <!--width中是像素；title是用于鼠标放在上面所显示的内容;border是照片边框-->
     <hr>
     <h2>教育背景</h2>
-    <a href="https://baidu.com">去百度</a>
+    <a href="https://baidu.com" target="_blank">去百度</a>
+    <!--target是以什么方式打开新界面，—_blank 是新的界面打开，不写默认是本页面-->
     <a href="personal copy.html">去二号</a>
+    <a href="#">空连接</a>
+    <!--如果链接还没做好就用“#”代替-->
+    <a href="1.zip">点击直接下载</a>
+    <!--如果链接直接是压缩包或者文件点击就会直接下载-->
+    <a href="https://baidu.com"><img src="1.webp" alt="点击去往！" width="200" height="200"></a>
+    <a href="#go1">锚点链接</a>
+    <!--锚点链接是点击快速去往本页面的一个地方！-->
     <hr>
     <h3>兴趣爱好</h3>
+    <font size = "20px"><!--<font size>是字体大小-->
+        <font color = "red"><!--<font color>是字体颜色-->
+            <u>I love html</u><!--<u>是字体下划线-->
+                <br>
+            <i>I love html too</i><!--<i>是斜体-->
+        </font>
+    </font>
+    <div>我是一个div标签，自己独占一行</div>
+    <div>我还是一个div标签</div>
+    <span>我是一个span标签，用来分隔行，一行可以多个span</span>
+    <span>这里还是一个span标签</span>
+    
     <ul>
         <li>健身</li>
         <ul>
@@ -29,5 +56,51 @@
         <li>音乐</li>
         <li>书法</li>
     </ul>
+    <hr>
+    <h4 id="go1"> 锚点链接</h4>
+    <p>锚点链接是点击快速去往本页面的一个地方！</p>
+    <h4>特殊字符</h4>
+    <p>&nbsp;小于号，&it;大于号，&amp;和号，&yen;人民币，&copy;版权，
+        &deg;摄氏度，&sup2;平方，&sup3;立方，&divide;除号，&times;乘号，&plusmn;正负号</p>
+    <h4>表格标签</h4>
+    <table align="center" border="1" cellpadding="2" cellspacing="0" width="500">
+        <!-- align是表格相对周围元素的对齐方式“left、center、reght”；border是单元格是否有边框
+        ，默认为“”表示没有边框；cellpadding是内容和单元格之间的距离；cellspacing是单元格时间的
+        空白默认1像素；width是表格的宽度。 -->
+        <thead>
+        <tr>
+            <th>姓名</th> <th>性别</th> <th>年龄</th>
+            <!-- th 是表头单元格 会自动居中加粗 -->
+        </tr>
+        </thead>
+        <tbody>
+        <tr align="center">
+            <td>段延</td><td>男</td><td>20</td>
+        </tr>
+        <tr>
+            <td><a href="#">一个新地方</a></td>
+            <td><a href="#"><img src="1.webp" alt="图片" width="10" height="10"></a></td>
+            <!-- 表格中也可以访图片链接一类的 -->
+        </tr>
+        <tr>
+            <td colspan="3" align="center">合并行</td>
+        </tr>
+        <tr>
+            <td rowspan="2">合并列</td>
+            <td>123</td>
+            <td></td>
+        </tr>
+        <tr>
+            
+            <td>123</td>
+            <td></td>
+        </tr>
+        <!-- tr是行，td是列 -->
+        </tbody>
+
+    </table>
+    <h5>
+
+    </h5>
 </body>
 </html>
