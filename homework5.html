@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     let a = prompt("请输入你的数字")
+    for(let i = 1;i<2*a;i++){
+        if(i<=a){
+        for(let j = 1;j<=a-i;j++)
+        {
+            document.write('-')
+        }
+        for(let n = 1;n<=2*i-1;n++){
+            document.write('*')
+        }
+        document.write('<br>')
+    }
+    else{
+        for(let j = 1;j<=i-a;j++){
+            document.write('-')
+        }
+        for(let n = 1;n<=4*a-2*i-1;n++){
+            document.write('*')
+        }
+        document.write('<br>')
+    }
+}
+</script>
+</html>
