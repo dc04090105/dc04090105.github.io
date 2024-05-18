@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lesson12.css">
+</head>
+<body>
+    <div id="container">
+        <div id="list">
+            <img src="1.jpeg" class = 'image'>
+            <img src="2.jpeg" class = 'image'>
+            <img src="3.png" class = 'image'>
+            <img src="4.jpg" class = 'image'>
+        </div>
+        <div id="buttons">
+            <span index = "0"></span>
+            <span index = "1"></span>
+            <span index = "2"></span>
+            <span index = "3"></span>
+        </div>
+        <div class="arrow" id="prev"><</div>
+        <div class="arrow" id="next">></div>
+    </div>
+    
+</body>
+</html>
+<script>
+    var images = document.querySelectorAll('img');
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+    var buttons = document.querySelectorAll('#buttons span');
+    var currentindex = 0;
+    images.forEach(function(image){
+        image.style.display = 'none';
+    });
+    images[currentindex].style.display = 'block';
+
+    buttons.forEach(function(button,index){
+        if(index===currentindex){
+            button.classList.add('active');
+        }
+    });
+
+    function shownextimage(){
+        images[currentindex].style.display = 'none';
+        currentindex = (currentindex+1)%images.length;
+        images[currentindex].style.display = 'block';
+        buttons.forEach(function(button){
+            button.classList.remove('active');
+        })
+        buttons[currentindex].classList.add('active');
+    }
+    function showprevimage(){
+        images[currentindex].style.display = 'none';
+        currentindex = (currentindex-1+images.length)%images.length;
+        images[currentindex].style.display = 'block';
+        buttons.forEach(function(button){
+            button.classList.remove('active');
+        })
+        buttons[currentindex].classList.add('active');
+    }
+    prev.addEventListener('click',showprevimage);
+    next.addEventListener('click',shownextimage);
+    
+    
+    
+    function showimage(index){
+        images.forEach(function(image){  
+            image.style.display = 'none';  
+        });  
+    images[index].style.display = 'block';  
+    currentindex = index;  
+    buttons.forEach(function(button) {  
+        button.classList.remove('active');  
+    });  
+    buttons[index].classList.add('active'); 
+    }
+
+    buttons.forEach(function(button){
+        button.addEventListener('click',function(){
+            var index = parseInt(this.getAttribute('index'),10);
+            showimage(index);
+        });
+    });
+
+    
+  
+
+setInterval(shownextimage, 3000); 
+    
+    
+   
+</script>
