@@ -1,0 +1,820 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+   
+}
+body{
+    border-radius: 5%;
+}
+.head{
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+}
+.h-countainer{
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    width: auto;
+    margin: 0 10px;
+    justify-content:space-between;
+    text-align: center;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(255, 255, 255);
+    
+}
+@media(max-width:600px){
+    .h-left, .h-center, .h-right{
+        flex-basis:100%;
+        text-align:center;
+    }
+    nav{
+        flex-direction:cloumn;
+        justify-content:flex-start;
+    }
+    .body1{
+        flex-direction:cloumn;
+        justify-content:flex-start;
+    }
+    .body2{
+        flex-direction:cloumn;
+        justify-content:flex-start;
+    }
+}
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-left{
+    height: 60px;
+    background-color: rgb(253, 253, 253);
+    width: 100px;
+    background-image: url(logo.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.nav-center{
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+}
+.nav-right{
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    border-radius: 10px;
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease; 
+}
+.nav-right:hover{
+    background-color: #77bff2;
+}
+
+a{
+    color: black;
+}
+a:hover{
+    color: blue;
+}
+span{
+    margin: auto;
+    transition:all 0.5s ease;
+}
+.dropdown{
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    margin: 0 10px;
+    text-align: center;
+    align-items: center;
+    display:flex;
+    
+}
+.dropdown-menu1 {  
+    display: none;  
+    position: absolute;  
+    flex-direction: column;
+    top: 100%; /* 下拉菜单从导航条底部开始 */  
+    left: 0;  
+    right: 0; /* 宽度铺满屏幕 */  
+    background-color: #fefefe;  
+    z-index: 1000; /* 确保下拉菜单在导航条之上 */  
+    text-align: center; /* 使下拉菜单内容水平居中 */  
+    height: 60px;
+    transition:all 0.5s ease;
+}  
+.dropdown-menu1 .dropdown-option {  
+    display: inline-block; /* 选项水平显示，根据需要调整 */  
+    padding: 10px 20px; /* 为选项添加内边距 */  
+    margin: 5px; /* 为选项添加外边距，使它们分开 */  
+    background-color: transparent; /* 初始背景色透明 */  
+    cursor: pointer; /* 鼠标悬停时显示小手图标 */  
+    transition:all 0.5s ease;
+    border-radius: 5%;
+}  
+.dropdown-menu1 .dropdown-option:hover {  
+    background-color: rgb(110, 110, 110); /* 鼠标悬停时改变背景色 */  
+    transition:all 0.5s ease;
+}  
+.dropdown:hover .dropdown-menu1{  
+    display: block;  
+}
+
+
+
+
+.dropdown-menu2 {  
+    display: none;  
+    position: absolute;  
+    top: 100%; /* 下拉菜单从导航条底部开始 */  
+    left: 0;  
+    right: 0; /* 宽度铺满屏幕 */  
+    background-color: #f9f9f9;  
+    z-index: 1000; /* 确保下拉菜单在导航条之上 */  
+    text-align: center; /* 使下拉菜单内容水平居中 */  
+    height: 60px;
+} 
+.dropdown-menu2 .dropdown-option {  
+    display: inline-block; /* 选项水平显示，根据需要调整 */  
+    padding: 10px 20px; /* 为选项添加内边距 */  
+    margin: 5px; /* 为选项添加外边距，使它们分开 */  
+    background-color: transparent; /* 初始背景色透明 */  
+    cursor: pointer; /* 鼠标悬停时显示小手图标 */  
+    transition:all 0.5s ease;
+    border-radius: 5%;
+}  
+.dropdown-menu2 .dropdown-option:hover {  
+    background-color: rgb(110, 110, 110); /* 鼠标悬停时改变背景色 */  
+}  
+  
+/* 显示下拉菜单的样式 */  
+.dropdown:hover .dropdown-menu2 {  
+    display: block;  
+}
+
+
+.dropdown-menu3 {  
+    display: none;  
+    position: absolute;  
+    top: 100%; /* 下拉菜单从导航条底部开始 */  
+    left: 0;  
+    right: 0; /* 宽度铺满屏幕 */  
+    background-color: #fdfdfe;  
+    z-index: 1000; /* 确保下拉菜单在导航条之上 */  
+    text-align: center; /* 使下拉菜单内容水平居中 */  
+    height: 60px;
+} 
+.dropdown-menu3 .dropdown-option {  
+    display: inline-block; /* 选项水平显示，根据需要调整 */  
+    padding: 10px 20px; /* 为选项添加内边距 */  
+    margin: 5px; /* 为选项添加外边距，使它们分开 */  
+    background-color: transparent; /* 初始背景色透明 */  
+    cursor: pointer; /* 鼠标悬停时显示小手图标 */  
+    transition:all 0.5s ease;
+    border-radius: 5%;
+}  
+.dropdown-menu3 .dropdown-option:hover {  
+    background-color: rgb(110,110,110); /* 鼠标悬停时改变背景色 */  
+}  
+  
+/* 显示下拉菜单的样式 */  
+.dropdown:hover .dropdown-menu3 {  
+    display: block;  
+}
+
+
+
+.min-content{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 950px;
+    margin-top: 60px;
+}
+.image-container{
+    background-image:url(满月.jpg);
+    width: 100%;
+    height: 4950px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.image-container::before {  
+    /* 使用伪元素来添加半透明的背景色层 */  
+    content: "";  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    /* 设置背景色和透明度，例如半透明的黑色 */  
+    background-color: rgba(60, 60, 60, 0);  
+    
+}  
+.content{
+    width: 100%;
+   
+   z-index: 1;
+}
+.body1{
+    background-color: #fffefe;
+    height: 750px;
+    width: 100%;
+}
+/*以下是轮播css*/
+.carousel {  
+    position: relative; /* 相对定位，以便控制按钮可以相对于容器定位 */  
+    /* 根据需要设置宽度 */  
+    margin: 0 ;
+    height: 750px;
+    overflow: hidden; /* 隐藏超出容器的内容 */  
+  }  
+    
+  .carousel-images {  
+    display: flex; /* 使用Flexbox来水平排列图片 */  
+    transition: transform 1s ease; /* 平滑过渡效果 */  
+    object-fit: cover;
+  }  
+    
+  .carousel-images img {  
+    width: 100%; 
+    height: 100%;
+    display: none; /* 默认情况下隐藏所有图片，除了第一张 */  
+    object-fit: cover;
+    bottom: 0;  
+  }  
+  #first{
+    width: 100%;
+    height: 100%;
+    bottom: -20px;
+  }
+
+    
+  .carousel-images img:first-child {  
+    display: block; /* 显示第一张图片 */  
+  }  
+  .carousel-image.active {  
+    transform: translateX(-100%); /* 向左移动一个容器的宽度，实现滑动效果 */  
+  }  
+  
+    
+  .carousel-prev, .carousel-next {  
+    height: 40px;
+    width: 40px;
+    position: absolute; /* 绝对定位，相对于容器定位 */  
+    top: 50%; /* 垂直居中 */  
+    transform: translateY(-50%); /* 向上移动自身高度的一半来实现垂直居中 */  
+    /* 添加更多样式，如背景色、边框、字体等 */  
+  }  
+  .carousel:hover .carousel-prev{
+    display: block;
+  }
+  .carousel:hover .carousel-next{
+    display: block;
+  }
+  .carousel-prev:hover{
+    background-color: rgba(0,0,0,0.5);
+  }
+  .carousel-next:hover{
+    background-color: rgba(0,0,0,0.5);
+  }
+    
+  .carousel-prev {  
+    left: 10px; 
+    position: absolute;
+    display: none;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color:aliceblue;
+    background-color: rgba(0,0,0,0.3);
+    cursor:pointer;
+  }  
+    
+  .carousel-next {  
+    right: 10px; 
+    position: absolute;
+    display: none;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color:aliceblue;
+    background-color: rgba(60,60,60,0.5);
+    cursor:pointer; 
+  }
+
+.carousel-indicators {  
+    position: absolute;  
+    bottom: 10px;  
+    height: 20px;
+    left: 50%;  
+    transform: translateX(-50%);  
+    display: flex;  
+    justify-content: center;  
+  }  
+    
+.carousel-indicators span{  
+    width: 10px;  
+    height: 10px;  
+    border-radius: 50%;  
+    background-color: #5d5c5c;  
+    border-color: #ffffff;
+    margin: 0 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+  }  
+    
+.active {  
+    background-color: #7ea2fd !important;  
+}
+
+.body2{
+    height: 800px;
+    width: 100%;
+    text-align: center;
+}
+.introduce-technic{
+    display:inline-block;
+    width: 1400px;
+    height: 800px;
+    overflow: auto;
+}
+.intro-left{
+    height: 800px;
+    width:  900px;
+    float: left;
+}
+.intro-left .left{
+    height: 800px;
+    width: 425px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+    align-content: baseline;
+    
+}
+.intro-left .left .up{
+    height: 375px;
+    width: 375px;
+    background-color: #665ae8;
+    
+    border-radius: 5%;
+    background-image: url(爱好1.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    transition: width 0.5s ease, height 0.5s ease; 
+}
+#up1:hover{
+    height:390px;
+    width: 390px;
+}
+#up2:hover{
+    height:390px;
+    width: 390px;
+}
+#down1:hover{
+    height:390px;
+    width: 390px;
+}
+#down2:hover{
+    height:390px;
+    width: 390px;
+}
+
+.intro-left .left .down{
+    height: 375px;
+    width: 375px;
+    background-color:#665ae8;
+    border-radius: 5%;
+    background-image: url(爱好2.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top:auto;
+    transition: width 0.5s ease, height 0.5s ease; 
+}
+.intro-left .right{
+    height: 800px;
+    width: 425px;
+/*     background-color: #4fef64; */
+    float: right;
+    border-radius: 5%;
+    background-size: 100% 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+}
+.intro-left .right .up{
+    height: 375px;
+    width: 375px;
+    background-color: #665ae8;
+    border-radius: 5%;
+    background-image: url(爱好4.jpg);
+    background-size: 101% 100%;
+    background-position: center;
+    transition: width 0.5s ease, height 0.5s ease; 
+}
+.intro-left .right .down{
+    height: 375px;
+    width: 375px;
+    background-color:#665ae8;
+    border-radius: 5%;
+    background-image: url(爱好3.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top: auto;
+    transition: width 0.5s ease, height 0.5s ease; 
+}
+
+.intro-right{
+    height: 800px;
+    width: 500px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.including{
+    margin: 10px;
+    text-align:center;
+}
+.including h1{
+    color: white;
+    font-style: italic;
+    font-size:50px;
+    font-family: "STKaiti","华文楷体",sans-serif;
+}
+.including h3{
+    color: white;
+    font-style: italic;
+    font-size:60px;
+    font-family: "STKaiti","华文楷体",sans-serif;
+}
+.including h2{
+    color: white;
+    font-style: italic;
+    font-size:30px;
+    font-family: "STLiti", "华文隶书",serif;
+}
+.body3{
+/*     background-image: url(体验背景图.jpg); */
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color: rgba(0,0,0,0.5);
+    background-size: 50%;
+}
+.begin-order1{
+    margin: 5px ;
+    width: auto;
+    height: auto;
+    text-align:justify;
+}
+.begin-order1 h2{
+    color: white;
+}
+.begin-order2{
+    margin: 5px;
+    width: auto;
+    height: auto;
+    
+}
+.begin-order2 h1{
+    color: white;
+}
+.begin-order3{
+    margin: 5px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order3-innerbox h2{
+    color: white;
+}
+.order3-innerbox{
+    padding: 5px 5px;
+    height: 35px;
+    width: 150px;
+    border-radius: 10%;
+    background-color: rgb(250, 250, 250);
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease; 
+}
+.order3-innerbox h2{
+    color:black;
+}
+.order3-innerbox:hover{
+    box-shadow:0 0 10px rgba(0,0,0,0.5)
+}
+.order3-innerbox:hover{
+    height: 40px;
+    width: 155px;
+    background-color: #5bb9fc;
+}
+
+h1{
+    font-size: 50px;
+    color: black;
+}
+
+.body4{
+    width: 100%;
+    height: 600px;
+    background-color:rgba(193, 192, 192, 0);
+    display: flex;
+    align-items: center;
+}
+.body4 .inner{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.body4 .countainer{
+    width: 800px;
+    height: 300px;
+
+}
+.body4 .left{
+    width: 400px;
+    height: 300px;
+/*     background-color: #fffefe; */
+    float: left;
+    background-image: url(大学.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 15%;
+}
+.body4 .right{
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    float: right;
+}
+.body4 .right h1{
+    font-size: 40px;
+    font-family:"STKaiti","华文楷体",sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+.body4 .right h2{
+    font-size: 20px;
+    color: white;
+}
+.body4 .join{
+    height: 45px;
+    width: 150px;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30%;
+    border-radius: 5%;
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease; 
+}
+.body4 .join:hover{
+    height:55px;
+    width: 160px;
+    background-color: #5bb9fc;
+}
+.body4 .join h1{
+    font-size: 30px;
+    color: black;
+}
+
+
+.body5{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.body5 .center{
+    height: 900px;
+    width: 1400px;
+/*     background-color: #4fef64; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.body5 .left{
+    width: 675px;
+    height: 900px;
+
+    margin-right: 50px; 
+}
+.body5 .right{
+    width: 675px;
+    height: 900px;
+
+}
+.body5 .up{
+    height: 675px;
+    width: 675px;
+    background-color: #f6f8fb;
+    border-radius: 5%;
+}
+.body5 .right .up{
+    background-image: url(深沉.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.body5 .left .up{
+    background-image: url(梦想.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+}
+.body5 .down{
+    height: 225px;
+    width: 100%;
+
+    border-radius: 5%;
+    text-align: center;
+}
+.body5 h1{
+    color: white;
+    text-align: center;
+    font-family: "STKaiti","华文楷体",sans-serif;
+    font-size: 60px;
+}
+#culture{
+    font-size: 40px;
+}
+.body5 h2{
+    font-style: italic;
+    text-align:center;
+    color: white;
+    font-family: "STKaiti","华文楷体",sans-serif;
+    font-size: 35px;
+}
+
+
+.body7{
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body7 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.body7 .center{
+    height: 100%;
+    width: 1400px;
+/*     background-color: #4fef64; */
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    
+}
+.body7 .left{
+    height:100%;
+    width:400px;
+/*     background-color: #5bb9fc; */
+}
+.body7 .midle{
+    height:100%;
+    width:400px;
+/*     background-color: #5bb9fc; */
+    margin: 0 40px;
+}
+.body7 .right{
+    height:100%;
+    width:400px;
+/*     background-color: #5bb9fc; */
+}
+.body7 .top{
+    height: 350px;
+    width: 350px;
+/*     background-color: #665ae8; */
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.body7 .top1{
+    height: 300px;
+    width: 300px;
+}
+.body7 .top2{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.body7 .down{
+    height:350px;
+    width:350px;
+/*     background-color: #665ae8; */
+    margin-top: 100px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.body7 .down1{
+    height: 300px;
+    width: 300px;
+}
+.body7 .down2{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.body7 .down1{
+    height:350px;
+    width:350px;
+/*     background-color: #665ae8; */
+    margin-top: 100px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.body7 h1{
+    font-size: 50px;
+    font-family:"STKaiti","华文楷体",sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+.body7 h3{
+    margin-top: 30px;
+    font-size: 40px;
+    font-family:"STKaiti","华文楷体",sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+.foot{
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    background-image: url(自由.jpg);
+    background-size: 100%;
+}
+.foot .center{
+    width:1400px;
+    height: 100%;
+/*     background-color: #4fef64; */
+    display: flex;
+    flex-direction: column;
+}
+.foot .top{
+    height:200px;
+    width: 100%;
+/*     background-color: #ffffff; */
+    display: flex;
+    
+    align-items: center;
+    flex-direction: row;
+}
+.foot h1{
+    margin-top: 30px;
+    font-size: 40px;
+    font-family:"STKaiti","华文楷体",sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+
+
